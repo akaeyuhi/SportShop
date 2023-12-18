@@ -1,0 +1,16 @@
+<div class="card m-1 p-1 bg-light">
+  <h4>
+    {{product.name}}
+    <span class="badge rounded-pill bg-primary" style="float:right">
+{{ product.price | currency:"USD":"symbol":"2.2-2" }}
+</span>
+  </h4>
+  <div class="card-text bg-white p-1">
+    {{product.description}}
+    <button class="btn btn-success btn-sm float-end"
+            (click)="onClick()">
+      Add To Cart
+    </button>
+  </div>
+  <div class="card-text bg-white p-1">{{product.description}}</div>
+</div>
