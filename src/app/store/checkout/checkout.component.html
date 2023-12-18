@@ -14,9 +14,11 @@
 <form *ngIf="!orderSent" #form="ngForm" novalidate
       (ngSubmit)="submitOrder(form)" class="m-2">
   <div class="form-group">
-    <label>Name</label>
-    <input class="form-control" #name="ngModel" name="name"
-           [(ngModel)]="order.name" required />
+    <label>Name
+      <input class="form-control" #name="ngModel" name="name"
+             [(ngModel)]="order.name" required />
+    </label>
+
     <span *ngIf="submitted && name.invalid" class="text-danger">
 Please enter your name
 </span>
